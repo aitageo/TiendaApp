@@ -5,33 +5,37 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+.navbar h1 {
+    display: flex;
     font-size: 19px;
     margin: auto;
+    justify-content: center;
     color: #fff;
+    font-weight: bold;
+    font-family: 'italic', sans-serif;
 }
-
 
 /* Barra de navegacion */
 
 
-.navegacion{
+.navbar{
     width: 100%;
-    height: 85px;
+    height: 120px;
     background: linear-gradient(to right, #000 0%, #000 20%, #535151 60%, #ccc 100%);
     display: flex;
     position: fixed;
     overflow: hidden;
     z-index: 999;
+    margin-bottom: 2rem;
 }
 
-.navegacion ul {
+.navbar ul {
     display: flex;
     flex-direction: row;
     margin: auto;
 }
 
-.navegacion ul li {
+.navbar ul li {
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -39,16 +43,16 @@ h1 {
 
 }
 
-a {
+.nav-link {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-    padding: 0 30px;
+    padding: 0 18px;
     font-weight: bold;
 }
 
 
-a:hover {
+.nav-link:hover {
   color: #000;
 }
 
@@ -105,11 +109,75 @@ footer{
     text-align: center;
 }
 
+/* Estilos para el carrito */
+
+
 #carrito {
     width: 30px;
     height: 30px;
-    color: #000;
+    color: #fff;
     cursor: pointer;
+}
+
+
+.carrito-count {
+  position: absolute;
+  top: 20px;
+  right: 180px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 7px;
+  padding: 4px 7px;
+  border-radius: 70%;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+@media 
+(max-width: 720px) {
+  .carrito-count {
+    top: 73px;
+    right: 48px;
+    font-size: 5px;
+    padding: 3px 5px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0 10px;
+    color: #fff;
+  }
+
+  .nav-link:hover {
+    color: #00ff;
+  }
+    
+}
+
+.carrito-count.bump {
+  transform: scale(1);
+}
+
+
+.mostrar-carrito {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 300px;
+  border-radius: 10px;
+}
+
+
+.card-body {
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
 }
 
 
